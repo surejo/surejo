@@ -1,7 +1,9 @@
+import { WaitlistPage } from "@/components/waitlist/waitlist";
+
 export default function Waitlist() {
   return (
     <div>
-      <h1>Waitlist</h1>
+      <WaitlistPage />
     </div>
   );
 }
