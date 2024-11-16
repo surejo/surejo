@@ -29,9 +29,9 @@ export function LandingBackground() {
                         }}
                     >
                         <div className={`w-px h-12 rotate-${Math.floor(Math.random() * 360)} opacity-20 bg-gradient-to-b ${i % 4 === 0 ? 'from-blue-500' :
-                                i % 4 === 1 ? 'from-purple-500' :
-                                    i % 4 === 2 ? 'from-green-500' :
-                                        'from-red-500'
+                            i % 4 === 1 ? 'from-purple-500' :
+                                i % 4 === 2 ? 'from-green-500' :
+                                    'from-red-500'
                             } to-transparent`} />
                     </div>
                 ))}
@@ -39,7 +39,7 @@ export function LandingBackground() {
 
             {/* Main content */}
             <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-r from-neutral-200 via-neutral-100 to-neutral-300 text-4xl md:text-6xl lg:text-8xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+                <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-600 text-4xl md:text-6xl lg:text-8xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
                     Surejo
                 </h2>
 
@@ -80,19 +80,19 @@ export function LandingBackground() {
 
                 {/* CTA Button */}
                 <div className="flex justify-center relative z-50 my-10 cursor-pointer">
-                <Link href="/waitlist">
-                    <Button className="rounded-full group relative overflow-hidden">
-                        <span className="flex items-center relative z-10">
-                            Join the waitlist 
-                            <ArrowRight 
-                                size={24} 
-                                className="ml-2 transition-transform duration-300 group-hover:rotate-[-30deg] group-hover:translate-x-1 group-hover:-translate-y-1" 
-                            />
-                        </span>
-                        <span className="absolute inset-0 w-full h-full bg-black/10 scale-0 rounded-full group-hover:scale-150 transition-transform duration-300 ease-out" />
-                    </Button>
-                </Link>
-            </div>
+                    <Link href="/waitlist">
+                        <Button className="rounded-full group relative overflow-hidden">
+                            <span className="flex items-center relative z-10">
+                                Join the waitlist
+                                <ArrowRight
+                                    size={24}
+                                    className="ml-2 transition-transform duration-300 group-hover:rotate-[-30deg] group-hover:translate-x-1 group-hover:-translate-y-1"
+                                />
+                            </span>
+                            <span className="absolute inset-0 w-full h-full bg-black/10 scale-0 rounded-full group-hover:scale-150 transition-transform duration-300 ease-out" />
+                        </Button>
+                    </Link>
+                </div>
             </div>
 
             {/* Radial gradient overlay */}
