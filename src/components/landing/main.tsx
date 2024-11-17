@@ -28,18 +28,18 @@ export default function Main() {
                 {[
                     {
                         icon: <Sparkles className="text-blue-500" size={24} />,
-                        title: "Streamlined Growth",
-                        description: "Optimize your business potential"
+                        title: "Unlock Potential",
+                        description: "Empower your side hustle with tools designed to fuel growth and optimize performance."
                     },
                     {
                         icon: <TrendingUp className="text-green-500" size={24} />,
-                        title: "Track Progress",
-                        description: "Monitor your success in real-time"
+                        title: "Real-Time Insights",
+                        description: "Stay on top of your milestones with live updates and data-driven analytics."
                     },
                     {
                         icon: <Shield className="text-purple-500" size={24} />,
-                        title: "Secure Platform",
-                        description: "Your data, protected always"
+                        title: "Built for Trust",
+                        description: "Your journey matters. We prioritize data security so you can focus on scaling."
                     }
                 ].map((feature, index) => (
                     <div
