@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-unescaped-entities */
 'use client'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link";
 import { ArrowLeft, Send, CheckCircle2 } from "lucide-react";
 
@@ -30,6 +31,11 @@ export function WaitlistPage() {
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -42,7 +48,8 @@ export function WaitlistPage() {
             }
             console.log(response.data);
             setSubmitted(true);
-        } catch (error) {
+        } catch (error: any) {
+            console.error(error);
             setError("An error occurred. Please try again.");
         } finally {
             setLoading(false);
@@ -91,7 +98,7 @@ export function WaitlistPage() {
             </div>
 
             {/* Main content */}
-            <div className="w-full max-w-md px-4 py-8">
+            <div className={`transform transition-all duration-1000 w-full max-w-md px-4 py-8 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-100 dark:to-neutral-600 text-3xl md:text-4xl font-sans mb-6 relative z-20 font-bold tracking-tight">
                     Join the Waitlist
                 </h2>
