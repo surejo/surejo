@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 import { useState, useEffect } from "react";
-import { ArrowRight, Sparkles, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Briefcase, BarChart, ShieldCheck} from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -27,19 +27,19 @@ export default function Main() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
                 {[
                     {
-                        icon: <Sparkles className="text-blue-500" size={24} />,
-                        title: "Unlock Potential",
-                        description: "Empower your side hustle with tools designed to fuel growth and optimize performance."
+                        icon: <Briefcase className="text-blue-500" size={24} />,
+                        title: "Empower Freelancers",
+                        description: "Equip budding freelancers with the tools they need to grow, succeed, and stand out in competitive job markets. From portfolio building to skill assessments, we have you covered."
                     },
                     {
-                        icon: <TrendingUp className="text-green-500" size={24} />,
-                        title: "Real-Time Insights",
-                        description: "Stay on top of your milestones with live updates and data-driven analytics."
+                        icon: <BarChart className="text-green-500" size={24} />,
+                        title: "Transparent Opportunities",
+                        description: "Gain real-time access to curated job opportunities and feedback. Track your growth with insightful analytics tailored to help you land your next gig faster."
                     },
                     {
-                        icon: <Shield className="text-purple-500" size={24} />,
-                        title: "Built for Trust",
-                        description: "Your journey matters. We prioritize data security so you can focus on scaling."
+                        icon: <ShieldCheck className="text-purple-500" size={24} />,
+                        title: "Built for Growth",
+                        description: "Your journey matters. We focus on creating a secure and supportive ecosystem where quality work gets rewarded and growth becomes inevitable."
                     }
                 ].map((feature, index) => (
                     <div
@@ -69,6 +69,10 @@ export default function Main() {
                     </Button>
                 </Link>
             </div>
+
+            <p className="mt-8 text-sm text-neutral-400 text-center">
+                Have some questions or just want to know more about the platform while it's in building and testing mode? Contact: <a href="mailto:kgargg07@gmail.com" className="text-blue-400 hover:underline">kgargg07@gmail.com</a>
+            </p>
         </div>
     )
 }
