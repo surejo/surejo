@@ -27,6 +27,7 @@ export function LandingBackground() {
                             } to-transparent`} />
                     </div>
                 ))}
+                
             </div>
 
             <Main />
